@@ -1,0 +1,98 @@
+@keyframes fadein {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes dropin {
+    from {opacity: 0; transform: translateY(-25px);}
+    to {opacity: 1; transform: translateY(0px);}
+}
+
+body {
+    margin: 0;
+    font-family: 'Questrial', sans-serif;
+    color: #111111;
+}
+
+.bg-image {
+    z-index: 0;
+    position: fixed;
+    width: 110%;
+    height: 110%;
+    top: -10px;
+    left: -10px;
+    filter: blur(8px);
+    background-size: cover;
+    background-image: url("/static/img/bg.jpg");
+    background-position: center;
+}
+
+#greeting {
+    opacity: 0;
+    z-index: 1;
+    font-size: 64px;
+    margin-bottom: 0px;
+    animation-name: fadein;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.nav {
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav h3 {
+    opacity: 0;
+    padding: 0px 10px;
+    animation-name: dropin;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.one {
+    animation-delay: 1s;
+}
+
+.two {
+    animation-delay: 1.2s;
+}
+
+.three {
+    animation-delay: 1.4s;
+}
+
+.four {
+    animation-delay: 1.6s;
+}
+
+.five {
+    animation-delay: 1.8s;
+}
+
+.container {
+    margin-top: 0;
+    position: absolute;
+    margin-left: 10px;
+}
+
+a:link {
+    text-decoration: none;
+    color: #111111;
+}
+a:visited {
+    text-decoration: none;
+    color: #111111;
+}
+a:hover {
+    text-decoration: none;
+    color: #222288;
+}
+a:active {
+    text-decoration: none;
+    color: #111111;
+}

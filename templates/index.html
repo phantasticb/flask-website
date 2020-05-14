@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Byron | Homepage</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="bg-image"></div>
+        <div class="container">
+            <h1 id="greeting"></h1>
+            <div class="nav">
+                <a href="{{ url_for('about') }}">
+                    <h3 class="one">About</h3>
+                </a>
+                
+                <a href="https://github.com/phantasticb/">
+                    <h3 class="two">Github</h3>
+                </a>
+                
+                <a href="https://linkedin.com/in/byron-phan/">
+                    <h3 class="three">LinkedIn</h3>
+                </a>
+                
+                <a href="{{ url_for('markets') }}">
+                    <h3 class="four">Markets</h3>
+                </a>
+                
+                <a href="{{ url_for('login') }}">
+                    <h3 class="five">Maintenance</h3>
+                </a>
+            </div>
+            <script>
+                var time = new Date().getHours();
+                console.log(time);
+                var greeting = ""
+    
+                if (time >= 0 && time < 4) {
+                    greeting = "Good evening.";
+                } else if (time >= 4 && time < 12) {
+                    greeting = "Good morning.";
+                } else if (time >= 12 && time < 17) {
+                    greeting = "Good afternoon.";
+                } else {
+                    greeting = "Good evening.";
+                }
+    
+                const greeter = document.querySelector('#greeting');
+                greeter.textContent = greeting;
+            </script>
+        </div>
+    </body>
+</html>
